@@ -134,20 +134,12 @@ text-decoration: none;
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.mail::before {
-  content: "";
+.contacts .imgs {
   height: 12px;
 width: 16px;
+content: "";
 margin-right: 10px;
-background-image: url("../images/symbol-defs.svg#icon-smartphone-1");
-background-size: contain;
-}
-.tel::before {
-  content: "";
-height: 16px;
-width: 10px;
-margin-right: 10px;
-background-image: url("../images/symbol-defs.svg#icon-envelope-2");
+background-repeat: no-repeat;
 background-size: contain;
 }
 .contacts {
@@ -226,8 +218,9 @@ margin-top: 10px;
 }
 .peculiarities .item + .item {
 margin-left: 30px;
+
 }
-.peculiarities .item::before {
+.peculiarities .imgs {
   width: 270px;
   display: block;
 content: "";
@@ -238,18 +231,7 @@ background-repeat: no-repeat;
 background-position: center;
 background-color: #F5F4FA;;
 }
-.svg-locator::before {
-background-image: url("../images/Group1.svg");
-}
-.svg-watct::before {
-background-image: url("../images/Group2.svg");
-}
-.svg-computer::before{
-background-image: url("../images/Group3.svg");
-}
-.svg-spaceman::before {
-background-image: url("../images/Group4.svg");
-}
+
 /* Чим займаємось */
 .employment-title {
 font-weight: 700;
@@ -309,19 +291,27 @@ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 .team-link .link + .link {
 margin-left: 10px;
 }
-
+.team-link .link {
+}
 .team-link .imgs {
-  display: block;
-width: 44px;
 height: 44px;
+    width: 44px;
   padding: 12px;
+  display: block;
+content: "";
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+fill: #AFB1B8;
 }
 .team-link .link:focus,
 .team-link .link:hover {
-
-  border-radius: 50%;
+border-radius: 50%;
   background: #2196F3;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.team-link .imgs:focus,
+.team-link .imgs:hover {
+  fill: #fff;
 }
 .team-link {
   margin-top: 16px;
@@ -346,13 +336,35 @@ color: var(--main-text-color);
 .customers .link {
 border: 1px solid #AFB1B8;
 border-radius: 4px;
+}
+.customers .link:focus,
+.customers .link:hover {
+border-color: #2196F3;
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .customers-link .link + .link {
   margin-left: 30px;
 }
 .customers .imgs {
+content: "";
   padding: 16px 32px;
+  height: 92px;
+  width: 170px;
+  display: block;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+fill: #AFB1B8;
+}
+.customers .imgs:hover,
+.customers .imgs:focus {
+fill: #2196F3;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+.customers ul {
+  display: flex;
+  justify-content: center
 }
 /* footer */
 .footers-logo-studios {
@@ -416,7 +428,14 @@ border-radius: 50%;
 }
 
 .footers-social .imgs {
+  content: "";
+  width: 44px;
+  height: 44px;
   padding: 12px;
+  display: block;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
 /* .............................................................................. */
 /* Портфоліо */
